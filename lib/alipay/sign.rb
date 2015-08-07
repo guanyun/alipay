@@ -8,11 +8,11 @@ module Alipay
     def self.verify?(params)
       params.delete('sign_type')
       sign = params.delete('sign')
-      RSA.verify?(to_query(params), sign, :app)
+      RSA.verify?(to_query(params), sign)
     end
 
     def self.to_query(params)
-      Hash[params.stringify_keys.sort].to_query
+      params.stringify_keys.sort.map { |e| e.join('=') }.join('&')
     end
   end
 end

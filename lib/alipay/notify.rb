@@ -7,7 +7,7 @@ module Alipay
     end
 
     def self.verify_notify_id?(pid, notify_id)
-      uri = URI(::Service::GATEWAY_URL)
+      uri = URI(Alipay::Service::GATEWAY_URL)
       uri.query = URI.encode_www_form(
         'service'   => 'notify_verify',
         'partner'   => pid,
