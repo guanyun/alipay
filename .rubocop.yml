@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - db/**/*
+    - bin/*
+Metrics/LineLength:
+  Max: 128
+Metrics/ClassLength:
+  Max: 512
+Metrics/AbcSize:
+  Enabled: false
+Documentation:
+  Enabled: false
+Style/ClassVars:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
